@@ -25,11 +25,20 @@ public class Main {
         System.out.println("The total cost of your order, before tip, is: $" + totalCost);
         System.out.println("Total Percentage: " + tipPercent + "%" );
         double totalTip = (totalCost/100)*tipPercent;
+        totalTip=((double)((int)((totalTip+0.005)*100)))/100;
         System.out.println("Total Tip: $" + totalTip);
         double totalBill = totalCost + totalTip;
+        totalBill=((double)((int)((totalBill+0.005)*100)))/100;
         System.out.println("Total Bill with tip: $" + totalBill);
         double perPersonBeforeTip = totalCost/numPeople;
-
+        perPersonBeforeTip=((double)((int)((perPersonBeforeTip+0.005)*100)))/100;
+        System.out.println("Per person cost before tip: $" + perPersonBeforeTip);
+        double tipPerPerson = totalTip/numPeople;
+        tipPerPerson=((double)((int)((tipPerPerson+0.005)*100)))/100;
+        System.out.println("Tip Per Person: $"+ tipPerPerson);
+        double costPerPerson = totalBill/numPeople;
+        costPerPerson=((double)((int)((costPerPerson+0.005)*100)))/100;
+        System.out.println("Cost Per Person: $"+ costPerPerson);
 
 
 
