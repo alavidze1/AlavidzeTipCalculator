@@ -13,14 +13,14 @@ public class Main {
         double nextItem=scan.nextDouble();
         scan.nextLine();
         while(nextItem>=0){
-            tempCost+=((double)((int)((nextItem+0.005)*100)))/100;
+            tempCost=((double)((int)((nextItem+0.005)*100)))/100;
             totalCost=totalCost+tempCost;
             System.out.println("Tempcost: "+ tempCost);
+            tempCost=0;
+            totalCost=((double)((int)((totalCost+0.005)*100)))/100;
+            System.out.println("Totalcost: "+ totalCost);
             nextItem=scan.nextDouble();
             scan.nextLine();
-            tempCost=0;
-            System.out.println("Totalcost: "+ totalCost);
-            totalCost+=((double)((int)((totalCost+0.005)*100)))/100;
         }
 
 
